@@ -11,7 +11,7 @@ $(function() {
       $('.burger_btn').attr('area-hidden','true');
     }
   });
-  // 背景の黒ボックスクリックでもドロワーが消えるようにする
+  // 背景のボックスクリックでもドロワーが消えるようにする
   $('.header_nav, .nav_item a').click(function () {
     $('body').removeClass('is-drawerActive');
     $('.burger_btn').attr('aria-expanded', 'false');
@@ -36,7 +36,7 @@ $(function() {
     var target = $(href == "#" || href == "" ? "html" :href);
     var position = target.offset().top - headerHeight * 2;
     
-    $("html,body").animate({scrollTop:position}, speed, "swing");
+    $("html,body").animate({scrollTop:position}, speed, "linear");
     return false;
   });
 
@@ -61,7 +61,7 @@ $(function() {
 				slidesToScroll: 2,//1回のスクロールで2枚の写真を移動して見せる
 			}
       },{
-			breakpoint: 420,//モニターの横幅が426px以下の見せ方
+			breakpoint: 600,//モニターの横幅が426px以下の見せ方
 			settings: {
 				slidesToShow: 1,//スライドを画面に1枚見せる
 				slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
