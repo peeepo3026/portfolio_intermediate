@@ -607,6 +607,12 @@ body.noscroll{
 /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
 .slider .slick-slide {
   margin:0 28px;
+  @media (max-width: 1000px) {
+    margin: 0 .7%;
+  }
+  @media (max-width: 375px) {
+    margin: 0 .5%;
+  }
 }
 
 // お問い合わせ
